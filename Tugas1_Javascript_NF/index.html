@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menghitung Luas Bangun Datar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 400px;
+      padding: 25px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f9f9f9;
+      margin-bottom: 20px;
+    }
+    input {
+      margin: 5px 0;
+      padding: 8px;
+      width: 100%;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      background: rgb(21, 0, 128);
+      color: white;
+      border: none; 
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: darkcyan;
+    }
+    .result {
+      margin-top: 10px;
+      padding: 10px;
+      background: #e8f5e9;
+      border: 1px solid #4caf50;
+      border-radius: 5px;
+    }
+    .containerr {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        
+    }
+  </style>
+</head>
+<body>
+  <h2>Menghitung Luas Bangun Datar</h2>
+
+  <div class="containerr">
+
+      <!-- Persegi Panjang -->
+      <div class="container">
+          <h3>Persegi Panjang</h3>
+          <label>Panjang:</label>
+          <input type="number" id="panjang">
+          <label>Lebar:</label>
+          <input type="number" id="lebar">
+          <button type="button" onclick="hitungPersegiPanjang()">Hitung Luas Persegi Panjang</button>
+          <div class="result" id="hasilPP">Hasil akan tampil di sini...</div>
+        </div>
+        
+        <!-- Bujur Sangkar -->
+        <div class="container">
+            <h3>Bujur Sangkar</h3>
+            <label>Sisi:</label>
+            <input type="number" id="sisi">
+            <button type="button" onclick="hitungBujurSangkar()">Hitung Luas Bujur Sangkar</button>
+            <div class="result" id="hasilBS">Hasil akan tampil di sini...</div>
+        </div>
+        
+        <!-- Segitiga -->
+        <div class="container">
+            <h3>Segitiga</h3>
+            <label>Alas:</label>
+            <input type="number" id="alas">
+            <label>Tinggi:</label>
+            <input type="number" id="tinggi">
+            <button type="button" onclick="hitungSegitiga()">Hitung Luas Segitiga</button>
+            <div class="result" id="hasilSG">Hasil akan tampil di sini...</div>
+        </div>
+    </div>
+        
+        <script>
+            // Persegi Panjang
+            function hitungPersegiPanjang() {
+                let panjang = parseFloat(document.getElementById("panjang").value);
+                let lebar = parseFloat(document.getElementById("lebar").value);
+                let hasil = panjang * lebar;
+                document.getElementById("hasilPP").innerHTML = `Luas Persegi Panjang = <b>${hasil}</b>`;
+            }
+            
+            // Bujur Sangkar
+            function hitungBujurSangkar() {
+                let sisi = parseFloat(document.getElementById("sisi").value);
+                let hasil = sisi * sisi;
+                document.getElementById("hasilBS").innerHTML = `Luas Bujur Sangkar = <b>${hasil}</b>`;
+            }
+
+            // Segitiga
+            function hitungSegitiga() {
+                let alas = parseFloat(document.getElementById("alas").value);
+                let tinggi = parseFloat(document.getElementById("tinggi").value);
+                let hasil = 0.5 * alas * tinggi;
+                document.getElementById("hasilSG").innerHTML = `Luas Segitiga = <b>${hasil}</b>`;
+            }
+            </script>
+</body>
+</html>
