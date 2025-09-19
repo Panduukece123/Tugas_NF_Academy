@@ -1,0 +1,48 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 8px;
+  
+}
+
+
+thead {
+  background: #009688;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+
+tbody tr:hover {
+  background: #f1f1f1;
+}
+
+tfoot td {
+  font-weight: bold;
+  background: rgb(223, 223, 223);
+}
+tfoot tr:hover td {
+  background-color: white;
+  color: black;
+}
